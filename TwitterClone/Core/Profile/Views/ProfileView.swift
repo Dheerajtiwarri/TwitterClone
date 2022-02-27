@@ -24,10 +24,6 @@ struct ProfileView: View {
             
             tweetsView
             
-           
-           
-          
-            
         Spacer()
         }
     }
