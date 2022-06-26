@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewTweetView: View {
     @State private var caption = ""
-    @Enviroment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
             HStack{
