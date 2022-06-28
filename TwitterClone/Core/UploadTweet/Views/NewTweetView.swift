@@ -9,12 +9,12 @@ import SwiftUI
 
 struct NewTweetView: View {
     @State private var caption = ""
-
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
             HStack{
                 Button{
-                    
+                    presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Cancel")
                         .foregroundColor(Color(.systemBlue))
