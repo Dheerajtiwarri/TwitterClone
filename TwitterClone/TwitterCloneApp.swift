@@ -5,7 +5,7 @@
 //  Created by Dheeraj on 19/02/22.
 //
 
-//27th June 2022 : Dheeraj : 2:24:13 : UI till login signup done.
+//28th Aug 2022 : Dheeraj : 3:01:28 : UI till login signup done.
 import SwiftUI
 import Firebase
 
@@ -21,7 +21,6 @@ struct TwitterCloneApp: App {
         WindowGroup {
             NavigationView{
                 ContentView()
-                   
             }
             .environmentObject(viewModel)
         }
