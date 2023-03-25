@@ -15,9 +15,12 @@ struct ContentView: View {
     
     var body: some View {
         Group{
+        
             if viewModel.userSession == nil{
+      //  print("Debug: Data changed")
                 LoginView()
             }else {
+               // print("Debug: Data same")
                 mainInterfaceView
             }
         }

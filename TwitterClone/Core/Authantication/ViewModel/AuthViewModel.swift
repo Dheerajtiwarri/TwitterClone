@@ -11,6 +11,8 @@ import Firebase
 class AuthViewModel: ObservableObject{
     @Published var userSession: FirebaseAuth.User?
     
+    @Published var didAuthUser = false
+    
     init(){
         self.userSession = Auth.auth().currentUser
         
@@ -45,7 +47,11 @@ class AuthViewModel: ObservableObject{
             guard let user = result?.user else {
                 return
             }
-            self.userSession = user
+            //for user profile photo selection we are not going to change value here
+            // this will redirect user to login in content View
+            
+           // self.userSession = user
+            
             
             print("DEBUG : Registered user successfully ")
             
@@ -61,6 +67,7 @@ class AuthViewModel: ObservableObject{
                         print("DEBUG : Failed to upload with error \(error.localizedDescription)")
                         return
                     }
+                    self.didAuthUser = true
                     print("DEBUG : Did upload user data")
                 }
         }
